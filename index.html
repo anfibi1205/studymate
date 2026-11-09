@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyMate - Student Organizer</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>StudyMate 💗</h2>
+    <p>Smart Student Organizer</p>
+
+    <nav>
+        <a href="#dashboard">🏠 Dashboard</a>
+        <a href="#jadwal">📚 Jadwal</a>
+        <a href="#tugas">✅ Tugas</a>
+        <a href="#catatan">📝 Catatan</a>
+    </nav>
+
+    <div class="quote">
+        ✨ Belajar hari ini untuk masa depan yang lebih baik!
+    </div>
+</div>
+
+<main>
+
+    <header>
+        <div>
+            <h1>Halo, Pelajar! 👋</h1>
+            <p>Atur kegiatanmu agar lebih terorganisir.</p>
+        </div>
+
+        <button onclick="aktifkanNotifikasi()">
+            🔔 Aktifkan Notifikasi
+        </button>
+    </header>
+
+    <!-- DASHBOARD -->
+    <section id="dashboard">
+        <h2>Dashboard</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>📚 Total Tugas</h3>
+                <h1 id="total">0</h1>
+            </div>
+
+            <div class="card">
+                <h3>✅ Tugas Selesai</h3>
+                <h1 id="selesai">0</h1>
+            </div>
+
+            <div class="card">
+                <h3>⏳ Belum Selesai</h3>
+                <h1 id="belum">0</h1>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- JADWAL -->
+    <section id="jadwal">
+        <h2>📚 Jadwal Pelajaran</h2>
+
+        <input id="hari" placeholder="Masukkan hari">
+
+        <input id="mapel" placeholder="Nama pelajaran">
+
+        <input id="jam" type="time">
+
+        <button onclick="tambahJadwal()">
+            + Tambah Jadwal
+        </button>
+
+        <div id="daftarJadwal"></div>
+    </section>
+
+    <!-- TUGAS -->
+    <section id="tugas">
+        <h2>✅ Daftar Tugas</h2>
+
+        <input id="namaTugas" placeholder="Nama tugas">
+
+        <input id="deadline" type="datetime-local">
+
+        <button onclick="tambahTugas()">
+            + Tambah Tugas
+        </button>
+
+        <div id="daftarTugas"></div>
+    </section>
+
+    <!-- CATATAN -->
+    <section id="catatan">
+        <h2>📝 Catatan Pribadi</h2>
+
+        <textarea
+            id="isiCatatan"
+            placeholder="Tuliskan catatan pentingmu..."
+        ></textarea>
+
+        <button onclick="simpanCatatan()">
+            💾 Simpan Catatan
+        </button>
+
+        <p id="statusCatatan"></p>
+    </section>
+
+    <footer>
+        <p>© 2026 StudyMate | Smart Student Organizer 💗</p>
+    </footer>
+
+</main>
+
+<!-- JAVASCRIPT -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
